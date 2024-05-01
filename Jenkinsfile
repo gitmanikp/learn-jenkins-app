@@ -23,7 +23,7 @@ pipeline {
             steps {
                 sh '''
                 echo 'Hello Jenkins Test'
-                test -f build.index.html
+                test -f build/index.html
                 npm test
                 '''
             }
