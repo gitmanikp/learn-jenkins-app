@@ -10,7 +10,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh'''
-                ls -la
+                ls -la 
                 node --version
                 npm --version
                 npm ci
@@ -22,6 +22,8 @@ pipeline {
         stage('Test') {
             steps {
                 sh '''
+                echo 'Hello Jenkins Test'
+                test -f build.index.html
                 npm test
                 '''
             }
