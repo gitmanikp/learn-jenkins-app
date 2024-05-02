@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                sh '''
+                sh ''' 
                 echo 'Hello Jenkins Test'
                 test -f build/index.html
                 npm test
